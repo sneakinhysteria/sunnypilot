@@ -2,7 +2,9 @@ import os
 
 from openpilot.common.api.base import BaseApi
 
-API_HOST = os.getenv('API_HOST', 'https://api.commadotai.com')
+# Konik Stable rather than comma connect: the device is a Konik A1 and the
+# account lives on their backend. Still overridable by env var.
+API_HOST = os.getenv('API_HOST', 'https://api.konik.ai/')
 
 
 class CommaConnectApi(BaseApi):
